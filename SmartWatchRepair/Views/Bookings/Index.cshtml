@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SmartWatchRepair.Models.Booking>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Bookings</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>User</th>
+            <th>Device Model</th>
+            <th>Status</th>
+            <th>Booking Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var booking in Model)
+
+        {
+            <tr>
+                <td>@booking.Id</td>
+                <td>@booking.UserId</td>
+                <td>@booking.DeviceModelId</td>
+                <td>@booking.Status</td>
+                <td>@booking.BookingDate</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Bookings", new { id = booking.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", "Bookings", new { id = booking.Id })">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

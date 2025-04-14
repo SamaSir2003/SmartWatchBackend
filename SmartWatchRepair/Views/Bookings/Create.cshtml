@@ -1,0 +1,41 @@
+﻿@model SmartWatchRepair.Models.Booking
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Create a New Booking</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="UserId">User</label>
+        <input type="text" asp-for="UserId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="DeviceModelId">Device Model</label>
+        <input type="text" asp-for="DeviceModelId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="RepairIssueId">Repair Issue</label>
+        <input type="text" asp-for="RepairIssueId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input type="text" asp-for="Status" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="BookingDate">Booking Date</label>
+        <input type="datetime-local" asp-for="BookingDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="EstimatedDelivery">Estimated Delivery</label>
+        <input type="datetime-local" asp-for="EstimatedDelivery" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Booking</button>
+</form>

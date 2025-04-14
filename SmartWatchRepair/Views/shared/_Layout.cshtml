@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Smart Watch Repair</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <h1>Smart Watch Repair</h1>
+        <nav>
+            <a href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("Index", "Bookings")">Bookings</a>
+            <a href="@Url.Action("Index", "Users")">Users</a>
+            <a href="@Url.Action("Index", "DeviceModels")">Device Models</a>
+        </nav>
+    </div>
+
+    <div id="main-content">
+
+        @RenderBody()  <!-- The content of the view will be inserted here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SmartWatch Repair</p>
+    </footer>
+</body>
+</html>
+

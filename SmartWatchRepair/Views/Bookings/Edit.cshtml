@@ -1,0 +1,42 @@
+﻿@model SmartWatchRepair.Models.Booking
+
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Edit Booking</h2>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label for="UserId">User</label>
+        <input type="text" id="UserId" name="UserId" class="form-control" value="@Model.UserId" />
+    </div>
+
+    <div class="form-group">
+        <label for="DeviceModelId">Device Model</label>
+        <input type="text" id="DeviceModelId" name="DeviceModelId" class="form-control" value="@Model.DeviceModelId" />
+    </div>
+
+    <div class="form-group">
+        <label for="RepairIssueId">Repair Issue</label>
+        <input type="text" id="RepairIssueId" name="RepairIssueId" class="form-control" value="@Model.RepairIssueId" />
+    </div>
+
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input type="text" id="Status" name="Status" class="form-control" value="@Model.Status" />
+    </div>
+
+    <div class="form-group">
+        <label for="BookingDate">Booking Date</label>
+        <input type="datetime-local" id="BookingDate" name="BookingDate" class="form-control" value="@Model.BookingDate.ToString("yyyy-MM-ddTHH:mm")" />
+    </div>
+
+    <div class="form-group">
+        <label for="EstimatedDelivery">Estimated Delivery</label>
+        <input type="datetime-local" id="EstimatedDelivery" name="EstimatedDelivery" class="form-control" value="@Model.EstimatedDelivery.ToString("yyyy-MM-ddTHH:mm")" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Booking</button>
+</form>
